@@ -40,7 +40,7 @@ function addappter(jsonMicro){
 	      console.log(xhr.responseText); // 'This is the returned text.'
 		var h = document.body;
 		h.innerHTML = xhr.responseText;
-		    setTimeout(function(){ table(); }, 3000);
+		    setTimeout(function(){ table(); }, 10000);
 	    } else {
 	      console.log('Error: ' + xhr.status); // An error occurred during the request.
 	    }
