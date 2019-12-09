@@ -12,6 +12,24 @@
 	};  
 
 function addappter(jsonMicro){
+	function table() {
+		let a_table = document.getElementById("a__table");
+		let arrCell = [], arrRow = salesforce['table']['rows'];		
+		arrRow.forEach(function(row, rowIndex){
+			arrCell = row;
+			thisRow = a_table.insertRow(rowIndex);
+			arrCell.forEach(function(cell, cellIndex){ 
+				thisCell = thisRow.insertCell(cellIndex);
+				thisCell.innerHTML = cell;
+			});
+		});
+	};
+
+	function image() {
+	};
+
+	function form() {
+	};
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', 'https://darylbrowne.github.io/addappter/addappter.html');
@@ -24,12 +42,13 @@ function addappter(jsonMicro){
 	      console.log(xhr.responseText); // 'This is the returned text.'
 		var h = document.body;
 		h.insertAdjacentHTML("afterend", xhr.responseText);
+		    table();
 	    } else {
 	      console.log('Error: ' + xhr.status); // An error occurred during the request.
 	    }
 	  }
 	};
             
-	document.write('<h1>Coming soon...The Addappter');
+	document.write('<h1>Coming soon...The Addappter</h1>');
         console.dir(jsonMicro);
 }
