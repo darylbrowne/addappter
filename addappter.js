@@ -24,7 +24,7 @@ function addappter(jsonMicro){
 				thisCell.innerHTML = cell;
 			});
 		});
-		document.body.insertAdjacentHTML("afterbegin", clone);
+		//document.body.insertAdjacentHTML("afterbegin", clone);
 	};
 	
 	var xhr = new XMLHttpRequest();
