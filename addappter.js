@@ -25,12 +25,6 @@ function addappter(jsonMicro){
 		});
 		var clone = temp.content.cloneNode(true);
 	};
-
-	function image() {
-	};
-
-	function form() {
-	};
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', 'https://darylbrowne.github.io/addappter/addappter.html');
@@ -43,7 +37,7 @@ function addappter(jsonMicro){
 	      console.log(xhr.responseText); // 'This is the returned text.'
 		var h = document.body;
 		h.insertAdjacentHTML("afterend", xhr.responseText);
-		    table();
+		    setTimeout(function(){ table(); }, 3000);
 	    } else {
 	      console.log('Error: ' + xhr.status); // An error occurred during the request.
 	    }
