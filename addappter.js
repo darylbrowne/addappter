@@ -12,21 +12,23 @@
 	};  
 
 function addappter(jsonMicro){
-            document.write('<h1>Coming soon...The Addappter');
-            console.dir(jsonMicro);
-                
-		let a_table = document.getElementById("a__table");
-		let arrCell = [], arrRow = salesforce['table']['rows'];		
-		arrRow.forEach(function(row, rowIndex){
-			arrCell = row;
-			thisRow = a_table.insertRow(rowIndex);
-			arrCell.forEach(function(cell, cellIndex){ 
-				thisCell = thisRow.insertCell(cellIndex);
-				thisCell.innerHTML = cell;
-			});
-		});
-			var temp = document.getElementById(template);
-			var clone = temp.content.cloneNode(true);
-			$('body').append(clone);
-        
-        }
+	
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'https://darylbrowne.github.io/addappter/addappter.html');
+	xhr.send(null);	
+	xhr.onreadystatechange = function () {
+	  var DONE = 4; // readyState 4 means the request is done.
+	  var OK = 200; // status 200 is a successful return.
+	  if (xhr.readyState === DONE) {
+	    if (xhr.status === OK) {
+		var target = document.body.innerHTML += xhr.responseText;
+	      console.log(xhr.responseText); // 'This is the returned text.'
+	    } else {
+	      console.log('Error: ' + xhr.status); // An error occurred during the request.
+	    }
+	  }
+	};	
+            
+	document.write('<h1>Coming soon...The Addappter');
+        console.dir(jsonMicro);
+}
