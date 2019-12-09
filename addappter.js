@@ -14,7 +14,6 @@
 function addappter(jsonMicro){
 	function table() {
 		var temp = document.getElementById("a__table");
-		var clone = temp.content.cloneNode(true);
 		var arrCell = [], arrRow = salesforce['table']['rows'];		
 		arrRow.forEach(function(row, rowIndex){
 			arrCell = row;
@@ -24,6 +23,7 @@ function addappter(jsonMicro){
 				thisCell.innerHTML = cell;
 			});
 		});
+		var clone = temp.content.cloneNode(true);
 		var h = document.body;
 		h.insertAdjacentHTML("afterend", clone);	
 	};
