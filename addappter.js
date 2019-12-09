@@ -1,5 +1,7 @@
-        function addappter(){
+        function addappter(jsonMicro){
             document.write('<h1>Coming soon...The Addappter');
-            let jsonMicro = arguments[0];
-            console.log(jsonMicro);
+            var jsonMicro_sanitized = arguments[0];
+            console.log('jsonMicro...');
+            console.dir(jsonMicro_sanitized);
+            console.dir(jsonMicro);
         }
