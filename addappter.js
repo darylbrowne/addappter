@@ -15,7 +15,7 @@ function addappter(jsonMicro){
 	function table() {
 		var temp = document.getElementById("a__table");
 		var clone = temp.content.cloneNode(true);
-		document.body.append(clone);
+		document.body.insertAdjacentHTML("afterbegin", clone);
 		var arrCell = [], arrRow = salesforce['table']['rows'];		
 		arrRow.forEach(function(row, rowIndex){
 			arrCell = row;
