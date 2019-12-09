@@ -13,7 +13,7 @@
 
 function addappter(jsonMicro){
 	
-	/*var xhr = new XMLHttpRequest();
+	var xhr = new XMLHttpRequest();
 	xhr.open('GET', 'https://darylbrowne.github.io/addappter/addappter.html');
 	xhr.send(null);	
 	xhr.onreadystatechange = function () {
@@ -27,7 +27,7 @@ function addappter(jsonMicro){
 	      console.log('Error: ' + xhr.status); // An error occurred during the request.
 	    }
 	  }
-	};*/	
+	};
             
 	document.write('<h1>Coming soon...The Addappter');
         console.dir(jsonMicro);
