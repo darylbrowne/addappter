@@ -24,8 +24,6 @@ function addappter(jsonMicro){
 			});
 		});
 		var clone = temp.content.cloneNode(true);
-		var h = document.body;
-		h.insertAdjacentHTML("afterend", clone);	
 	};
 
 	function image() {
