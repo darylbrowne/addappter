@@ -23,6 +23,9 @@ function addappter(jsonMicro){
 				thisCell.innerHTML = cell;
 			});
 		});
+		var temp = document.getElementById("a__table");
+		var clone = temp.content.cloneNode(true);
+		$('body').append(clone);		
 	};
 
 	function image() {
