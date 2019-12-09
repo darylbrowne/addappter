@@ -13,19 +13,19 @@
 
 function addappter(jsonMicro){
 	function table() {
-		let a_table = document.getElementById("a__table");
-		let arrCell = [], arrRow = salesforce['table']['rows'];		
+		var temp = document.getElementById("a__table");
+		var clone = temp.content.cloneNode(true);
+		var arrCell = [], arrRow = salesforce['table']['rows'];		
 		arrRow.forEach(function(row, rowIndex){
 			arrCell = row;
-			thisRow = a_table.insertRow(rowIndex);
+			thisRow = temp.insertRow(rowIndex);
 			arrCell.forEach(function(cell, cellIndex){ 
 				thisCell = thisRow.insertCell(cellIndex);
 				thisCell.innerHTML = cell;
 			});
 		});
-		var temp = document.getElementById("a__table");
-		var clone = temp.content.cloneNode(true);
-		$('body').append(clone);		
+		var h = document.body;
+		h.insertAdjacentHTML("afterend", clone);	
 	};
 
 	function image() {
