@@ -23,7 +23,7 @@ function addappter(jsonMicro){
 	    if (xhr.status === OK) {
 	      console.log(xhr.responseText); // 'This is the returned text.'
 		var h = document.body;
-		h.insertAdjacentHTML("beforeend", xhr.responseText);
+		h.insertAdjacentHTML("afterend", xhr.responseText);
 	    } else {
 	      console.log('Error: ' + xhr.status); // An error occurred during the request.
 	    }
