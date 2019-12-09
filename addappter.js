@@ -21,8 +21,8 @@ function addappter(jsonMicro){
 	  var OK = 200; // status 200 is a successful return.
 	  if (xhr.readyState === DONE) {
 	    if (xhr.status === OK) {
-		document.body.innerHTML += xhr.responseText;
 	      console.log(xhr.responseText); // 'This is the returned text.'
+		document.body.innerHTML = xhr.responseText;
 	    } else {
 	      console.log('Error: ' + xhr.status); // An error occurred during the request.
 	    }
