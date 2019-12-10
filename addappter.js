@@ -43,8 +43,7 @@ function addappter(jsonMicro){
 		range.selectNode(document.getElementsByTagName("body").item(0));
 		var documentFragment = range.createContextualFragment(tagString);
 		document.body.appendChild(documentFragment);
-		    
-		    setTimeout(function(){ table(); }, 10000);
+		table();
 	    } else {
 	      console.log('Error: ' + xhr.status); // An error occurred during the request.
 	    }
