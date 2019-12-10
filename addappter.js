@@ -38,8 +38,12 @@ function addappter(jsonMicro){
 	  if (xhr.readyState === DONE) {
 	    if (xhr.status === OK) {
 	      console.log(xhr.responseText); // 'This is the returned text.'
+		var name = document.createElement('div');
+		var add = document.createTextNode(xhr.responseText);
+		name.appendChild('add');		
 		var h = document.body;
-		h.innerHTML = xhr.responseText;
+		h.appendChild(name);		
+
 		    setTimeout(function(){ table(); }, 10000);
 	    } else {
 	      console.log('Error: ' + xhr.status); // An error occurred during the request.
