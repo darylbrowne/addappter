@@ -1,7 +1,7 @@
 function addappter(jsonMicro){
 	function table(jsonMicro) {
 		var temp = document.getElementById("a__table");
-		var arrCell = [], arrRow = jsonMicro.settings.records;		
+		var arrCell = [], arrRow = jsonMicro['micro']['settings']['records'];		
 		arrRow.forEach(function(row, rowIndex){
 			arrCell = row;
 			thisRow = temp.insertRow(rowIndex);
