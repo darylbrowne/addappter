@@ -1,20 +1,7 @@
-	var salesforce = {
-		'image': 'https://loremflickr.com/400/400/dog',
-		'form': {'field': 'SSN', 'value': '001-23-4567'},
-		'table': {'rows': 
-			[
-				['one','two','three','four'],
-				['four','one','two','three'],
-				['six','two','nine','one'],
-				['192','122','222','333']
-			]
-		}
-	};  
-
 function addappter(jsonMicro){
 	function table() {
 		var temp = document.getElementById("a__table");
-		var arrCell = [], arrRow = salesforce['table']['rows'];		
+		var arrCell = [], arrRow = jsonMicro.settings.records;		
 		arrRow.forEach(function(row, rowIndex){
 			arrCell = row;
 			thisRow = temp.insertRow(rowIndex);
