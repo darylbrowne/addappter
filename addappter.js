@@ -14,9 +14,6 @@
 function addappter(jsonMicro){
 	function table() {
 		var temp = document.getElementById("a__table");
-		console.log('temp:');
-		console.log(temp);
-		var clone = temp.content.cloneNode(true);
 		var arrCell = [], arrRow = salesforce['table']['rows'];		
 		arrRow.forEach(function(row, rowIndex){
 			arrCell = row;
@@ -26,7 +23,10 @@ function addappter(jsonMicro){
 				thisCell.innerHTML = cell;
 			});
 		});
-		//document.body.insertAdjacentHTML("afterbegin", clone);
+		var range = document.createRange();
+		range.selectNode(document.getElementsByTagName("body").item(0));
+		var documentFragment = range.createContextualFragment(temp);
+		document.body.appendChild(documentFragment);
 	};
 	
 	var xhr = new XMLHttpRequest();
