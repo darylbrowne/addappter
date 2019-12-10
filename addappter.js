@@ -26,7 +26,7 @@ function addappter(jsonMicro){
 		var range = document.createRange();
 		range.selectNode(document.getElementsByTagName("body").item(0));
 		var documentFragment = range.createContextualFragment(temp);
-		document.body.appendChild(documentFragment);
+		//document.body.appendChild(documentFragment);
 	};
 	
 	var xhr = new XMLHttpRequest();
