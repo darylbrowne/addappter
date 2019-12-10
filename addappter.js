@@ -1,5 +1,5 @@
 function addappter(jsonMicro){
-	function table() {
+	function table(jsonMicro) {
 		var temp = document.getElementById("a__table");
 		var arrCell = [], arrRow = jsonMicro.settings.records;		
 		arrRow.forEach(function(row, rowIndex){
@@ -30,7 +30,7 @@ function addappter(jsonMicro){
 		range.selectNode(document.getElementsByTagName("body").item(0));
 		var documentFragment = range.createContextualFragment(tagString);
 		document.body.appendChild(documentFragment);
-		table();
+		table(jsonMicro);
 	    } else {
 	      console.log('Error: ' + xhr.status); // An error occurred during the request.
 	    }
