@@ -40,7 +40,7 @@ function addappter(jsonMicro){
 	      console.log(xhr.responseText); // 'This is the returned text.'
 		var name = document.createElement('div');
 		var add = document.createTextNode(xhr.responseText);
-		name.appendChild('add');		
+		name.appendChild(add);		
 		var h = document.body;
 		h.appendChild(name);		
 
