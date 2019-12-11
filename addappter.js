@@ -12,7 +12,7 @@ function addappter(jsonMicro){
 		var arrCell = [], arrRowObj = jsonMicro['micro']['settings']['records'];		
 		var html = ''
 		for (row in arrRowObj) {
-			console.log(row);
+			console.log(arrRowObj[row]);
 		/*html += `
 		<tr>
 		    <td> ${row.columns.value} </td>
