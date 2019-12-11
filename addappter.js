@@ -1,19 +1,25 @@
 function addappter(jsonMicro){
+
 	function table(jsonMicro) {
-		var temp = document.getElementById("a__table");
-		var arrCell = [], arrRow = jsonMicro['micro']['settings']['records'];		
-		arrRow.forEach(function(row, rowIndex){
-			arrCell = row;
-			thisRow = temp.insertRow(rowIndex);
-			arrCell.forEach(function(cell, cellIndex){ 
-				thisCell = thisRow.insertCell(cellIndex);
-				thisCell.innerHTML = cell;
-			});
-		});
-		var range = document.createRange();
-		range.selectNode(document.getElementsByTagName("body").item(0));
-		var documentFragment = range.createContextualFragment(temp);
-		//document.body.appendChild(documentFragment);
+		var htmlTable = `
+			<table>
+				<caption></caption>
+				<colgroup></colgroup>
+				<thead></thead>
+				<tbody>${tbody}</tbody>
+				<tfoot></tfoot>
+			</table>`;
+		var arrCell = [], arrRowObj = jsonMicro['micro']['settings']['records'];		
+		var html = ''
+		for (row in arrRowObj) {
+			console.log(row);
+		/*html += `
+		<tr>
+		    <td> ${row.columns.value} </td>
+		    <td> ${dc[key]} </td>
+		</tr>            
+		`*/
+		}
 	};
 	
 	var xhr = new XMLHttpRequest();
