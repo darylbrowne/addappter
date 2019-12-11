@@ -24,7 +24,7 @@ function addappter(jsonMicro){
 				<tbody>${tblRow}</tbody>
 				<tfoot></tfoot>
 			</table>
-			<textarea style="font-family: "Lucida Console", Monaco, monospace;">${jsonInspector}</textarea>`;
+			<textarea class="p-5 col-12" style="font-family: "Lucida Console", Monaco, monospace;">${jsonInspector}</textarea>`;
 
 		var content = document.getElementsByTagName("body").item(0);
 		content.insertAdjacentHTML("beforeend", htmlTable);
