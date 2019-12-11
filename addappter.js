@@ -3,8 +3,6 @@ function addappter(jsonMicro){
 	function table(jsonMicro) {
 		var tblRow = ``, arrRowObj = jsonMicro['micro']['settings']['records'];		
 		var objHeader = arrRowObj[0]['columns'];
-		console.log(arrRowObj);
-		
 		var tblHeader = objHeader.map(function (column) {return '<th>' + column + '</th>';}).join('');
 		
 		for (index in arrRowObj) {
@@ -24,7 +22,8 @@ function addappter(jsonMicro){
 				<thead><tr>${tblHeader}</tr></thead>
 				<tbody>${tblRow}</tbody>
 				<tfoot></tfoot>
-			</table>`;
+			</table>
+			<textarea style="font-family: "Lucida Console", Monaco, monospace;">${jsonMicro}</textarea>`;
 
 		var content = document.getElementsByTagName("body").item(0);
 		content.insertAdjacentHTML("beforeend", htmlTable);
