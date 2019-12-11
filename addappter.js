@@ -3,9 +3,9 @@ function addappter(jsonMicro){
 	function table(jsonMicro) {
 		var arrCell = [], arrRowObj = jsonMicro['micro']['settings']['records'];		
 		var html = ''
+		var tblRow = ``;
 		
 		for (index in arrRowObj) {
-			var tblRow = ``;
 			var tblCell = ``;
 			var objRecord = (arrRowObj[index]);
 			console.log(objRecord);
