@@ -4,17 +4,18 @@ function addappter(jsonMicro){
 		var arrCell = [], arrRowObj = jsonMicro['micro']['settings']['records'];		
 		var html = ''
 		var tblRow = ``;
+		console.log(arrRowObj);
+		var tblHeader = arrRowObj[0]['columns'];
+
+		tblHeader.map(function (column) {
+			return '<th>' + column + '</th>';
+		}).join('');
+
+		tblRow += `<tr>${tblHeader}</tr>`;						
 		
 		for (index in arrRowObj) {
 			var tblCell = ``;
 			var objRecord = (arrRowObj[index]);
-			var tblHeader = arrRowObj[index]['columns'];
-			
-			tblHeader.map(function (column) {
-				return '<th>' + column + '</th>';
-			}).join('');
-			
-			tblRow += `<tr>${tblHeader}</tr>`;						
 			for (cursor in objRecord) {
 				tblCell += cursor === 'column' ? `<th>${objRecord[cursor]['value']}</th>` : `<td>${objRecord[cursor]['value']}</td>`;				
 			}
