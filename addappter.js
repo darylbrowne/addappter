@@ -32,6 +32,5 @@ function addappter(jsonMicro){
 	};
 
 	document.write('<h1 class="p-5">The Addappter <small>(v0.1)</small></h1>');
-        console.dir(jsonMicro);
 	table(jsonMicro);            
 }
