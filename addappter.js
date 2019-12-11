@@ -22,7 +22,7 @@ function addappter(jsonMicro){
 				<caption></caption>
 				<colgroup></colgroup>
 				<thead></thead>
-				<tbody>${tblRow}</tbody>
+				<tbody class="table-striped">${tblRow}</tbody>
 				<tfoot></tfoot>
 			</table>`;
 
