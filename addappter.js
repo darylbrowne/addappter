@@ -31,7 +31,7 @@ function addappter(jsonMicro){
 		
 	};
 
-	document.write('<h1>Coming soon...The Addappter</h1>');
+	document.write('<h1>The Addappter (v0.1)</h1>');
         console.dir(jsonMicro);
 	table(jsonMicro);            
 }
