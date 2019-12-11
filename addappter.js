@@ -1,15 +1,11 @@
 function addappter(jsonMicro){
 
 	function table(jsonMicro) {
-		var arrCell = [], arrRowObj = jsonMicro['micro']['settings']['records'];		
-		var html = ''
-		var tblRow = ``;
+		var tblRow = ``, arrRowObj = jsonMicro['micro']['settings']['records'];		
+		var objHeader = arrRowObj[0]['columns'];
 		console.log(arrRowObj);
-		var tblHeader = arrRowObj[0]['columns'];
-
-		tblHeader = tblHeader.map(function (column) {
-			return '<th>' + column + '</th>';
-		}).join('');
+		
+		var tblHeader = objHeader.map(function (column) {return '<th>' + column + '</th>';}).join('');
 		
 		for (index in arrRowObj) {
 			var tblCell = ``;
@@ -25,7 +21,7 @@ function addappter(jsonMicro){
 			<table class="table table-striped table-bordered table-hover ">
 				<caption></caption>
 				<colgroup></colgroup>
-				<thead>${tblHeader}</thead>
+				<thead><tr>${tblHeader}</tr></thead>
 				<tbody>${tblRow}</tbody>
 				<tfoot></tfoot>
 			</table>`;
