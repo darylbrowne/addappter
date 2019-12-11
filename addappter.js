@@ -9,6 +9,7 @@ function addappter(jsonMicro){
 			var tblCell = ``;
 			var objRecord = (arrRowObj[index]);
 			for (record in objRecord) {
+				console.log(record)
 				tblCell += `<td>${record['value']}</td>`;
 			}
 			tblRow += `<tr>${tblCell}</tr>`;			
