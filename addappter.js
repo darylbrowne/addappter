@@ -8,12 +8,17 @@ function addappter(jsonMicro){
 		for (index in arrRowObj) {
 			var tblCell = ``;
 			var objRecord = (arrRowObj[index]);
-			console.log(objRecord);
+			var tblHeader = arrRowObj[index]['columns'];
+			
+			tblHeader.map(function (column) {
+				return '<th>' + column + '</th>';
+			}).join('');
+			
+			tblRow += `<tr>${tblHeader}</tr>`;						
 			for (cursor in objRecord) {
-				console.log('index:' + index + ' -- cursor' + cursor);
-				console.log(cursor);
-				tblCell += `<td>${objRecord[cursor]['value']}</td>`;
+				tblCell += cursor === 'column' ? `<th>${objRecord[cursor]['value']}</th>` : `<td>${objRecord[cursor]['value']}</td>`;				
 			}
+			
 			tblRow += `<tr>${tblCell}</tr>`;			
 		}
 
