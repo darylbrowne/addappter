@@ -18,7 +18,7 @@ function addappter(jsonMicro){
 		}
 
 		var htmlTable = `
-			<table>
+			<table class="table">
 				<caption></caption>
 				<colgroup></colgroup>
 				<thead></thead>
