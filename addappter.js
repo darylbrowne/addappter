@@ -10,8 +10,6 @@ function addappter(jsonMicro){
 		tblHeader.map(function (column) {
 			return '<th>' + column + '</th>';
 		}).join('');
-
-		tblRow += `<tr>${tblHeader}</tr>`;						
 		
 		for (index in arrRowObj) {
 			var tblCell = ``;
@@ -27,7 +25,7 @@ function addappter(jsonMicro){
 			<table class="table table-striped table-bordered table-hover ">
 				<caption></caption>
 				<colgroup></colgroup>
-				<thead></thead>
+				<thead>${tblHeader}</thead>
 				<tbody>${tblRow}</tbody>
 				<tfoot></tfoot>
 			</table>`;
