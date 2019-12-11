@@ -29,8 +29,8 @@ function addappter(jsonMicro){
 		content.insertAdjacentHTML("beforeend", htmlTable);
 		
 	};
-	
-	table(jsonMicro);            
+
 	document.write('<h1>Coming soon...The Addappter</h1>');
         console.dir(jsonMicro);
+	table(jsonMicro);            
 }
