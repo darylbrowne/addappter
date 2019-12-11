@@ -7,7 +7,7 @@ function addappter(jsonMicro){
 		console.log(arrRowObj);
 		var tblHeader = arrRowObj[0]['columns'];
 
-		tblHeader.map(function (column) {
+		tblHeader = tblHeader.map(function (column) {
 			return '<th>' + column + '</th>';
 		}).join('');
 		
@@ -15,7 +15,7 @@ function addappter(jsonMicro){
 			var tblCell = ``;
 			var objRecord = (arrRowObj[index]);
 			for (cursor in objRecord) {
-				tblCell += cursor === 'column' ? `<th>${objRecord[cursor]['value']}</th>` : `<td>${objRecord[cursor]['value']}</td>`;				
+				tblCell += `<td>${objRecord[cursor]['value']}</td>`;				
 			}
 			
 			tblRow += `<tr>${tblCell}</tr>`;			
