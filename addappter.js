@@ -10,6 +10,7 @@ function addappter(jsonMicro){
 			var objRecord = (arrRowObj[index]);
 			console.log(objRecord);
 			for (cursor in objRecord) {
+				console.log('index:' + index + ' -- cursor' + cursor);
 				console.log(cursor);
 				tblCell += `<td>${objRecord[cursor]['value']}</td>`;
 			}
