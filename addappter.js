@@ -18,11 +18,11 @@ function addappter(jsonMicro){
 		}
 
 		var htmlTable = `
-			<table class="table">
+			<table class="table table-striped table-bordered table-hover ">
 				<caption></caption>
 				<colgroup></colgroup>
 				<thead></thead>
-				<tbody class="table-striped">${tblRow}</tbody>
+				<tbody>${tblRow}</tbody>
 				<tfoot></tfoot>
 			</table>`;
 
