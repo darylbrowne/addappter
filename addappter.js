@@ -11,8 +11,9 @@ function addappter(jsonMicro){
 			for (record in objRecord) {
 				tblCell += `<td>${record['value']}</td>`;
 			}
-			tblRow += `<tr>${tblCell</tr>`;			
+			tblRow += `<tr>${tblCell}</tr>`;			
 		}
+
 		var htmlTable = `
 			<table>
 				<caption></caption>
@@ -21,6 +22,9 @@ function addappter(jsonMicro){
 				<tbody>${tblRow}</tbody>
 				<tfoot></tfoot>
 			</table>`;
+
+		var content = document.getElementsByTagName("body").item(0);
+		content.insertAdjacentHTML("beforeend", htmlTable);
 		
 	};
 	
